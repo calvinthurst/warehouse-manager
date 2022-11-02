@@ -20,14 +20,16 @@
             <h3>PROGRAM:<span class="text-light fs-2">WAREHOUSE MANAGER</span>
             </h3>
           </div>
-          <div class="col-3 text-center p-1">FILTER BY:</div>
-          <div class="col-3 text-center p-1 dropdown">LIGHTER THAN
+
+          <div class="col-2 text-center p-1" onclick="drawPackages()">PACKAGES</div>
+          <div class="col-2 text-center p-1">FILTER BY:</div>
+          <div class="col-2 text-center p-1 dropdown">LIGHTER THAN
             <div class="dropdown-content ">
               <input class='col-4 text-center' type="number" id='weight' onchange="filterLighter()">
               <P class="pt-1 mb-0">POUND/POUNDS</P>
             </div>
           </div>
-          <div class="col-3 text-center p-1 dropdown">PRIORITY
+          <div class="col-2 text-center p-1 dropdown">PRIORITY
             <div class="dropdown-content">
               <p onclick="filterPriority('standard')">STANDARD</p>
               <p onclick="filterPriority('express')">EXPRESS</p>
@@ -48,7 +50,7 @@
             <div class="col-2">IS IT FRAGILE</div>
             <div class="col-2">PRIORITY</div>
             <div class="col-2">TRACKING#</div>
-            <div id="package-info"></div>
+            <section class="row border border-success my-2 justify-content-around" id="package-info"></section>
           </section>
         </div>
       </div>
