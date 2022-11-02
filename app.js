@@ -53,7 +53,7 @@ const packages = [{
 function drawPackages() {
   let packageElm = document.getElementById("package-info")
   let template = ''
-  packages.forEach(package => { template += `<section class="row"><div class="col-3">${package.to}</div><div class="col-3">${package.weight}</div> <div class="col-3">${package.isFragile}</div> <div class="col-3">${package.trackingNumber}</div></section` });
+  packages.forEach(package => { template += `<section class="row border border-success my-2 justify-content-around"><div class="col-3">${package.to}</div><div class="col-2">${package.weight}</div> <div class="col-2">${package.isFragile}</div> <div class="col-2">${package.priorityLevel}</div> <div class="col-2">${package.trackingNumber}</div> </section` });
   packageElm.innerHTML = template
   console.log(template)
 }
@@ -86,7 +86,7 @@ function filterIsNotFragile() {
 function drawFiltered(parcel) {
   let packageElm = document.getElementById("package-info")
   let template = ''
-  parcel.forEach(box => { template += `<section class="row"><div class="col-3">${box.to}</div><div class="col-3">${box.weight}</div> <div class="col-3">${box.isFragile}</div> <div class="col-3">${box.trackingNumber}</div></section` });
+  parcel.forEach(box => { template += `<section class="row border border-success my-2 justify-content-around"><div class="col-3">${box.to}</div><div class="col-2">${box.weight}</div> <div class="col-2">${box.isFragile}</div> <div class="col-2">${box.priorityLevel}</div> <div class="col-2">${box.trackingNumber}</div></section` });
   packageElm.innerHTML = template
   console.log(packageElm)
 }
